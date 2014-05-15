@@ -53,7 +53,7 @@ namespace com.traitify.net.TraitifyLibrary
         }
 
         /// <summary>
-        /// GetAssessment
+        /// GetAssessment method
         /// </summary>
         /// <param name="assessmentId"></param>
         /// <returns>Assessment</returns>
@@ -70,7 +70,7 @@ namespace com.traitify.net.TraitifyLibrary
         }
 
         /// <summary>
-        /// GetSlides
+        /// GetSlides method
         /// </summary>
         /// <param name="assessmentId"></param>
         /// <returns>List<Slide></returns>
@@ -87,7 +87,7 @@ namespace com.traitify.net.TraitifyLibrary
         }
 
         /// <summary>
-        /// SetSlide
+        /// SetSlide method
         /// </summary>
         /// <param name="assessmentId"></param>
         /// <param name="slideId"></param>
@@ -101,7 +101,7 @@ namespace com.traitify.net.TraitifyLibrary
         }
 
         /// <summary>
-        /// GetPersonalityTypes
+        /// GetPersonalityTypes method
         /// </summary>
         /// <param name="assessmentId"></param>
         /// <returns>List<PersonalityType></returns>
