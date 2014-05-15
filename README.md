@@ -19,4 +19,35 @@ Include the TraitifyLibrary in your Visual Studio solution.
   Console.WriteLine("AssessmentId: " + assessment.id);
 ```
 
+#### Get Assessment
+```csharp
+  String assessment_id = "--Your assessment Id--";
+  Assessment assessment = traitify.GetAssessment(assessment_id);
+  Console.WriteLine("AssessmentId: " + assessment.id);
+```
+
+#### Get Assessment Slides
+```csharp
+  String assessment_id = "--Your assessment Id--";
+  List<Slide> slides = traitify.GetSlides(assessment_id);
+  Console.WriteLine("SlideId: " + slides[0].id);
+```
+
+#### Set Assessment Slide
+```csharp
+  String assessment_id = "--Your assessment Id--";
+  String slide_id = "--Your slide Id--";
+  traitify.SetSlide(assessment_id, slide_id);
+```
+
+#### Get Assessment Personality Types
+```csharp
+  String assessment_id = "--Your assessment Id--";
+  List<PersonalityType> personalityTypes = traitify.GetPersonalityTypes(assessment_id);
+  Console.WriteLine("SlideId: " + personalityTypes[0].id);
+```
+
+## Release History
+
+* 0.1.0 Initial release
 
