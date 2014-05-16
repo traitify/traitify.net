@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraitifyConsoleApp", "Trait
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraitifyLibrary", "TraitifyLibrary\TraitifyLibrary.csproj", "{07177BF0-6217-4D4A-9DCD-FAF62DEA6679}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraitifyUnitTests", "TraitifyUnitTests\TraitifyUnitTests.csproj", "{C940B6CE-AF41-4CD2-8AB5-DB0053AD96CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{07177BF0-6217-4D4A-9DCD-FAF62DEA6679}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07177BF0-6217-4D4A-9DCD-FAF62DEA6679}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07177BF0-6217-4D4A-9DCD-FAF62DEA6679}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C940B6CE-AF41-4CD2-8AB5-DB0053AD96CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C940B6CE-AF41-4CD2-8AB5-DB0053AD96CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C940B6CE-AF41-4CD2-8AB5-DB0053AD96CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C940B6CE-AF41-4CD2-8AB5-DB0053AD96CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

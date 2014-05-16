@@ -117,5 +117,17 @@ namespace com.traitify.net.TraitifyLibrary
             return personalityTypes;
         }
 
+        public List<Deck> GetDecks()
+        {
+            List<Deck> decks = default(List<Deck>);
+            using (var client = new HttpClient(new AuthHandler(_secretKey)) { BaseAddress = new Uri(_host) })
+            {
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                var response = client.GetAsync(_version + "/decks").Result;
+                string results = response.Content.ReadAsStringAsync().Result;
+                decks = JsonConvert.DeserializeObject<List<Deck>>(results);
+            }
+            return decks;
+        }
     }
 }

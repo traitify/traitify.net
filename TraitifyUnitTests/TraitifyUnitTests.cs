@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using com.traitify.net.TraitifyLibrary;
+using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace TraitifyUnitTests
 {
@@ -10,12 +12,10 @@ namespace TraitifyUnitTests
         [TestMethod]
         public void TestCreateAssessment()
         {
-            //Base URL: https://api-staging.traitify.com. 
-            //Private/Secret Key: qrn5u1ocl0niru9ntl0160njrc
-            //Public Key: qop22g5tmrcgl270nuhel9cq9g
             Traitify trait = new Traitify("https://???", "???", "???", "v1");
-            var response = trait.CreateAssesment("??");
+            var response = trait.CreateAssesment("???");
         }
+
 
         //Get Assessment Slides
         [TestMethod]
@@ -25,6 +25,14 @@ namespace TraitifyUnitTests
             var response = trait.GetAssessment("????");
         }
 
+        //Get Decks
+        [TestMethod]
+        public void TestGetDecks()
+        {
+            Traitify traitify = new Traitify("???", "???", "???", "v1");
+            List<Deck> decks = traitify.GetDecks();
+            int mycount = decks.Count;
+        }
         //Get Assessment Slides
 
         //Set Assessment Slide
