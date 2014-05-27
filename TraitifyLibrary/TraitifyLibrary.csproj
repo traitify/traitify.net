@@ -47,10 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assessment.cs" />
+    <Compile Include="AssessmentPersonalityTrait.cs" />
     <Compile Include="AuthHandler.cs" />
     <Compile Include="Badge.cs" />
     <Compile Include="Deck.cs" />
     <Compile Include="PersonalityGroup.cs" />
+    <Compile Include="PersonalityTrait.cs" />
     <Compile Include="PersonalityType.cs" />
     <Compile Include="Slide.cs" />
     <Compile Include="Traitify.cs" />

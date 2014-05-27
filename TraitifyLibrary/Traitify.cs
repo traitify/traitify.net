@@ -91,13 +91,35 @@ namespace com.traitify.net.TraitifyLibrary
         /// </summary>
         /// <param name="assessmentId"></param>
         /// <param name="slideId"></param>
-        public void SetSlide(string assessmentId, string slideId)
+        public bool SetSlide(string assessmentId, string slideId)
         {
+            bool wasUpdateSuccessful = false;
             using (var client = new HttpClient(new AuthHandler(_secretKey)) { BaseAddress = new Uri(_host) })
             {
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                client.PutAsync(_version + "/assessments/" + assessmentId + "/slides/" + slideId, null);
+                var response = client.PutAsync(_version + "/assessments/" + assessmentId + "/slides/" + slideId, null).Result;
+                wasUpdateSuccessful = JsonConvert.DeserializeObject<bool>(response.Content.ReadAsStringAsync().Result);
             }
+            return wasUpdateSuccessful;
+        }
+
+        /// <summary>
+        /// SetSlideBulkUpdate bulk update method
+        /// </summary>
+        /// <param name="assessmentId"></param>
+        /// <param name="slides"></param>
+        /// <returns></returns>
+        public List<Slide> SetSlideBulkUpdate(string assessmentId, List<Slide> slides)
+        {
+            List<Slide> responseSlides = default(List<Slide>);
+            using (var client = new HttpClient(new AuthHandler(_secretKey)) { BaseAddress = new Uri(_host) })
+            {
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                var jsonSlides = JsonConvert.SerializeObject(slides);
+                var response = client.PutAsync(_version + "/assessments/" + assessmentId + "/slides", new StringContent(jsonSlides, Encoding.UTF8, "application/json")).Result;
+                responseSlides = JsonConvert.DeserializeObject<List<Slide>>(response.Content.ReadAsStringAsync().Result);
+            }
+            return responseSlides;
         }
 
         /// <summary>
@@ -117,6 +139,28 @@ namespace com.traitify.net.TraitifyLibrary
             return personalityTypes;
         }
 
+        /// <summary>
+        /// GetPersonalityTraits method
+        /// </summary>
+        /// <param name="assessmentId"></param>
+        /// <param name="personality_type_id"></param>
+        /// <returns>List of AssessmentPersonalityTrait</returns>
+        public List<AssessmentPersonalityTrait> GetPersonalityTraits(string assessmentId, string personality_type_id)
+        {
+            List<AssessmentPersonalityTrait> assessmentPersonalityTraits = default(List<AssessmentPersonalityTrait>);
+            using (var client = new HttpClient(new AuthHandler(_secretKey)) { BaseAddress = new Uri(_host) })
+            {
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                var response = client.GetAsync(_version + "/assessments/" + assessmentId + "/personality_types/" + personality_type_id + "/personality_traits").Result;
+                assessmentPersonalityTraits = JsonConvert.DeserializeObject<List<AssessmentPersonalityTrait>>(response.Content.ReadAsStringAsync().Result);
+            }
+            return assessmentPersonalityTraits;
+        }
+
+        /// <summary>
+        /// GetDecks method
+        /// </summary>
+        /// <returns>List of Deck</returns>
         public List<Deck> GetDecks()
         {
             List<Deck> decks = default(List<Deck>);
