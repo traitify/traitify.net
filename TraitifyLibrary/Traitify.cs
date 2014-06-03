@@ -104,6 +104,27 @@ namespace com.traitify.net.TraitifyLibrary
         }
 
         /// <summary>
+        /// SetSlideUpdate method
+        /// </summary>
+        /// <param name="assessment_id"></param>
+        /// <param name="slide"></param>
+        /// <returns></returns>
+        public Slide SetSlideUpdate(String assessment_id, Slide slide)
+        {
+            Slide responseSlide = default(Slide);
+            using (var client = new HttpClient(new AuthHandler(_secretKey)) { BaseAddress = new Uri(_host) })
+            {
+                List<Slide> slideList = new List<Slide>();
+                slideList.Add(slide);
+                var jsonSlides = JsonConvert.SerializeObject(slideList);
+                var response = client.PutAsync(_version + "/assessments/" + assessment_id + "/slides", new StringContent(jsonSlides, Encoding.UTF8, "application/json")).Result;
+                string jsonSlideResult = response.Content.ReadAsStringAsync().Result;
+                responseSlide = JsonConvert.DeserializeObject<Slide>(jsonSlideResult);
+            }
+            return responseSlide;
+        }
+
+        /// <summary>
         /// SetSlideBulkUpdate bulk update method
         /// </summary>
         /// <param name="assessmentId"></param>
@@ -127,14 +148,16 @@ namespace com.traitify.net.TraitifyLibrary
         /// </summary>
         /// <param name="assessmentId"></param>
         /// <returns>List<PersonalityType></returns>
-        public List<PersonalityType> GetPersonalityTypes(string assessmentId)
+        public AssessmentPersonalityTypes GetPersonalityTypes(string assessmentId)
         {
-            List<PersonalityType> personalityTypes = default(List<PersonalityType>);
+            //List<PersonalityType> personalityTypes = default(List<PersonalityType>);
+            AssessmentPersonalityTypes personalityTypes = default(AssessmentPersonalityTypes);
             using (var client = new HttpClient(new AuthHandler(_secretKey)) { BaseAddress = new Uri(_host) })
             {
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 var response = client.GetAsync(_version + "/assessments/" + assessmentId + "/personality_types").Result;
-                personalityTypes = JsonConvert.DeserializeObject<List<PersonalityType>>(response.Content.ReadAsStringAsync().Result);
+                string personalityTypesJson = response.Content.ReadAsStringAsync().Result;
+                personalityTypes = JsonConvert.DeserializeObject<AssessmentPersonalityTypes>(personalityTypesJson);
             }
             return personalityTypes;
         }

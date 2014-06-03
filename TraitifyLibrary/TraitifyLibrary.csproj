@@ -48,6 +48,8 @@
   <ItemGroup>
     <Compile Include="Assessment.cs" />
     <Compile Include="AssessmentPersonalityTrait.cs" />
+    <Compile Include="AssessmentPersonalityType.cs" />
+    <Compile Include="AssessmentPersonalityTypes.cs" />
     <Compile Include="AuthHandler.cs" />
     <Compile Include="Badge.cs" />
     <Compile Include="Deck.cs" />
