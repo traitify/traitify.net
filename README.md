@@ -44,7 +44,14 @@ Include the TraitifyLibrary in your Visual Studio solution.
 ```csharp
   String assessment_id = "--Your assessment Id--";
   List<PersonalityType> personalityTypes = traitify.GetPersonalityTypes(assessment_id);
-  Console.WriteLine("SlideId: " + personalityTypes[0].id);
+  Console.WriteLine("Type: " + personalityTypes[0].name);
+```
+
+#### Get Assessment Personality Traits
+```csharp
+  String assessment_id = "--Your assessment Id--";
+  List<PersonalityTrait> personalityTraits = traitify.GetPersonalityTraits(assessment_id);
+  Console.WriteLine("Trait: " + personalityTraits[0].name);
 ```
 
 ## Release History

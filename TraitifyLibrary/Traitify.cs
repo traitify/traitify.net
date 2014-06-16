@@ -166,15 +166,14 @@ namespace com.traitify.net.TraitifyLibrary
         /// GetPersonalityTraits method
         /// </summary>
         /// <param name="assessmentId"></param>
-        /// <param name="personality_type_id"></param>
         /// <returns>List of AssessmentPersonalityTrait</returns>
-        public List<AssessmentPersonalityTrait> GetPersonalityTraits(string assessmentId, string personality_type_id)
+        public List<AssessmentPersonalityTrait> GetPersonalityTraits(string assessmentId)
         {
             List<AssessmentPersonalityTrait> assessmentPersonalityTraits = default(List<AssessmentPersonalityTrait>);
             using (var client = new HttpClient(new AuthHandler(_secretKey)) { BaseAddress = new Uri(_host) })
             {
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                var response = client.GetAsync(_version + "/assessments/" + assessmentId + "/personality_types/" + personality_type_id + "/personality_traits").Result;
+                var response = client.GetAsync(_version + "/assessments/" + assessmentId + "/personality_traits").Result;
                 assessmentPersonalityTraits = JsonConvert.DeserializeObject<List<AssessmentPersonalityTrait>>(response.Content.ReadAsStringAsync().Result);
             }
             return assessmentPersonalityTraits;

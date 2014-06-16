@@ -131,8 +131,7 @@ namespace TraitifyUnitTests
 
             Assessment assessment = createAssessment();
 
-            AssessmentPersonalityType personalityType = getPersonalityType(assessment.id);
-            List<AssessmentPersonalityTrait> assessmentPersonalityTraits = traitify.GetPersonalityTraits(assessment.id, personalityType.personality_type.id);
+            List<AssessmentPersonalityTrait> assessmentPersonalityTraits = traitify.GetPersonalityTraits(assessment.id);
 
             Assert.AreNotEqual(assessmentPersonalityTraits, null);
             Assert.AreNotSame(assessmentPersonalityTraits.Count, 0);
