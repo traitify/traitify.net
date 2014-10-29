@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraitifyConsoleApp", "TraitifyConsoleApp\TraitifyConsoleApp.csproj", "{3128E2F0-B4F9-48AD-8D34-0187DBCAF5DE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraitifyLibrary", "TraitifyLibrary\TraitifyLibrary.csproj", "{07177BF0-6217-4D4A-9DCD-FAF62DEA6679}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraitifyUnitTests", "TraitifyUnitTests\TraitifyUnitTests.csproj", "{C940B6CE-AF41-4CD2-8AB5-DB0053AD96CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraitifyDesktopApp", "TraitifyDesktopApp\TraitifyDesktopApp.csproj", "{0413B838-5081-44BD-8911-4FA7D999BC3A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{C940B6CE-AF41-4CD2-8AB5-DB0053AD96CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C940B6CE-AF41-4CD2-8AB5-DB0053AD96CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C940B6CE-AF41-4CD2-8AB5-DB0053AD96CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0413B838-5081-44BD-8911-4FA7D999BC3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0413B838-5081-44BD-8911-4FA7D999BC3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0413B838-5081-44BD-8911-4FA7D999BC3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0413B838-5081-44BD-8911-4FA7D999BC3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
