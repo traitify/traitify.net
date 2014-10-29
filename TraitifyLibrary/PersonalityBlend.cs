@@ -7,12 +7,12 @@ using System.Text;
 namespace com.traitify.net.TraitifyLibrary
 {
     [JsonObject(MemberSerialization.OptIn)]
-    public class AssessmentPersonalityTypes
+    public class PersonalityBlend
     {
         [JsonProperty]
-        public PersonalityBlend personality_blend { get; set; }
+        public PersonalityType personality_type_1 { get; set; }
 
         [JsonProperty]
-        public List<AssessmentPersonalityType> personality_types { get; set; }
+        public PersonalityType personality_type_2 { get; set; }
     }
 }

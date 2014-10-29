@@ -17,9 +17,7 @@ namespace com.traitify.net.TraitifyLibrary
         [JsonProperty]
         public String description { get; set; }
         [JsonProperty]
-        public String personality_group_id { get; set; }
-        [JsonProperty]
-        public String personality_group_name { get; set; }
+        public String personality_group { get; set; }
         [JsonProperty]
         public Nullable<Int64> created_at { get; set; }
         public DateTime CreatedAt 
@@ -34,7 +32,5 @@ namespace com.traitify.net.TraitifyLibrary
         public Nullable<Int32> slide_count { get; set; }
         [JsonProperty]
         public Nullable<Boolean> active { get; set; }
-        [JsonProperty]
-        public PersonalityGroup personality_group { get; set; }
     }
 }

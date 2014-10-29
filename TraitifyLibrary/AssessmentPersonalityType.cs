@@ -12,6 +12,6 @@ namespace com.traitify.net.TraitifyLibrary
         public PersonalityType personality_type { get; set; }
 
         [JsonProperty]
-        public Nullable<int> score { get; set; }
+        public Nullable<float> score { get; set; }
     }
 }

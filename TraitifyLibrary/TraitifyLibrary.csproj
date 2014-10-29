@@ -52,6 +52,7 @@
     <Compile Include="AuthHandler.cs" />
     <Compile Include="Badge.cs" />
     <Compile Include="Deck.cs" />
+    <Compile Include="PersonalityBlend.cs" />
     <Compile Include="PersonalityGroup.cs" />
     <Compile Include="PersonalityTrait.cs" />
     <Compile Include="PersonalityType.cs" />
