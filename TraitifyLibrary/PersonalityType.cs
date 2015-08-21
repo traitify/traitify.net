@@ -17,7 +17,5 @@ namespace com.traitify.net.TraitifyLibrary
         public String description { get; set; }
         [JsonProperty]
         public Badge badge { get; set; }
-        [JsonProperty]
-        public List<string> famous_people { get; set; }
     }
 }
