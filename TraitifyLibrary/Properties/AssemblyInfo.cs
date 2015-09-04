@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("TraitifyLibrary")]
 [assembly: AssemblyDescription("Traitify is a .NET 4 wrapper for the Traitify Developer's API.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("floradu88")]
+[assembly: AssemblyCompany("efleming davidfekke floradu88")]
 [assembly: AssemblyProduct("TraitifyLibrary")]
 [assembly: AssemblyCopyright("Copyright © 2015")]
 [assembly: AssemblyTrademark("")]
@@ -31,5 +31,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.0.1.0")]
+[assembly: AssemblyFileVersion("1.0.1.0")]
