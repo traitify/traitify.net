@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraitifyConsoleApp", "TraitifyConsoleApp\TraitifyConsoleApp.csproj", "{3128E2F0-B4F9-48AD-8D34-0187DBCAF5DE}"
 EndProject
@@ -10,6 +10,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraitifyUnitTests", "TraitifyUnitTests\TraitifyUnitTests.csproj", "{C940B6CE-AF41-4CD2-8AB5-DB0053AD96CC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraitifyDesktopApp", "TraitifyDesktopApp\TraitifyDesktopApp.csproj", "{0413B838-5081-44BD-8911-4FA7D999BC3A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{8E81FB21-B0D5-4EBD-8579-B44D7DE53E60}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
