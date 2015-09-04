@@ -5,6 +5,11 @@ Traitify is a .NET 4 wrapper for the Traitify Developer's API.
 ## Installation
 Include the TraitifyLibrary in your Visual Studio solution.
 
+or use Nuget
+
+Install-Package TraitifyLibrary
+https://www.nuget.org/packages/TraitifyLibrary/1.0.0
+
 ##Usage
 
 #### Config
