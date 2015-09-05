@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>TraitifyLibrary</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <projectUrl>https://github.com/traitify/traitify.net</projectUrl>
+    <licenseUrl>https://github.com/traitify/traitify.net/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>0.1.0 Initial release</releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <tags>personality traits api</tags>
+  </metadata>
+</package>
